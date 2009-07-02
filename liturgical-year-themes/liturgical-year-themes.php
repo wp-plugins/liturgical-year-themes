@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Liturgical Year Themes
-Version: 1
+Version: 1.1
 Plugin URI: http://scottlenger.com/development/liturgical-year-themes-wordpress-plugin
 Description: Adds a stylesheet for the day or season of the Liturgical year.
 Author: Scott Lenger
@@ -71,18 +71,21 @@ function get_liturgical_time($type = '') {
 			$name = 'Ordinary Time';
 			$title = 'Ordinary Time';	
 		}
-	} elseif ( $date >= ( $easter+63 ) ) {
-		$name = 'ordinary-time';
-		$title = 'Ordinary Time';	
-	} elseif ( $date >= ( $easter+56 ) ) {
-		$name = 'trinity-sunday';
-		$title = 'Trinity Sunday';
-	} elseif ( $date >= ( $easter+49 ) ) {
-		$name = 'pentecost';
-		$title = 'Pentecost Sunday';
-	}  elseif ( $date == ( $easter+39 ) ) {
-		$name = 'ascension';
-		$title = 'Ascension Day';
+	} elseif ( $date >= ( $easter+57 ) ) {
+        $name = 'ordinary-time';
+        $title = 'Ordinary Time';    
+    } elseif ( $date == ( $easter+56 ) ) {
+        $name = 'trinity-sunday';
+        $title = 'Trinity Sunday';
+    } elseif ( $date >= ( $easter+50 ) ) {
+        $name = 'ordinary-time';
+        $title = 'Ordinary Time';
+    } elseif ( $date == ( $easter+49 ) ) {
+        $name = 'pentecost';
+        $title = 'Pentecost Sunday';
+    }  elseif ( $date == ( $easter+39 ) ) {
+        $name = 'ascension';
+        $title = 'Ascension Day';
 	} elseif ( $date >= ( $easter+7 ) ) {
 		$name = 'eastertide';
 		$title = 'Eastertide';
